@@ -113,7 +113,7 @@ A combination of modern and scalable technologies is used to build the backend o
 
   ## 📦 Database Design
 
-This document outlines the core entities used in the backend of the Airbnb Clone project, including their key fields and how they relate to one another.
+This outlines the core entities used in the backend of the Airbnb Clone project, including their key fields and how they relate to one another.
 
 ---
 

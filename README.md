@@ -247,7 +247,7 @@ Tracks user/system actions.
 
 ---
 
-## 🛠️ Features Overview
+## 🛠️ Feature Breakdown
 
 This section outlines the main features of the Airbnb Clone backend and how they contribute to the functionality of the platform.
 

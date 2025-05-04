@@ -108,3 +108,141 @@ A combination of modern and scalable technologies is used to build the backend o
 
 - **CI/CD Pipelines**  
   Automates testing, building, and deployment processes, ensuring smooth integration and faster release cycles.
+
+---
+
+  ## 📦 Database Design
+
+This document outlines the core entities used in the backend of the Airbnb Clone project, including their key fields and how they relate to one another.
+
+---
+
+## 🧑‍💼 1. User
+Represents both hosts and guests in the system.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `username`: Unique user handle
+- `email`: Used for login and communication
+- `is_host`: Boolean indicating if user is a host
+- `date_joined`: Timestamp of account creation
+
+**Relationships:**
+- Can own multiple properties (if a host)
+- Can make multiple bookings (if a guest)
+- Can write multiple reviews
+- Can receive multiple notifications
+- Can be associated with analytics events
+
+---
+
+## 🏠 2. Property
+A listing created by a host.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `title`: Property name
+- `description`: Detailed info
+- `location`: Address or coordinates
+- `price_per_night`: Nightly rate
+
+**Relationships:**
+- Belongs to one host (User)
+- Has many bookings
+- Has many reviews
+- Has many images
+
+---
+
+## 📅 3. Booking
+A reservation made by a guest.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user`: Guest making the booking
+- `property`: The booked property
+- `check_in`: Start date
+- `check_out`: End date
+
+**Relationships:**
+- Belongs to one user
+- Belongs to one property
+- Associated with one payment
+
+---
+
+## 💳 4. Payment
+A transaction for a booking.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `booking`: Booking being paid for
+- `amount`: Total cost
+- `status`: e.g., pending, completed
+- `timestamp`: Payment time
+
+**Relationships:**
+- Belongs to one booking
+
+---
+
+## ⭐ 5. Review
+Guest feedback about a property.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user`: Reviewer
+- `property`: Reviewed property
+- `rating`: Score (1-5)
+- `comment`: Text feedback
+
+**Relationships:**
+- Belongs to one user
+- Belongs to one property
+
+---
+
+## 🖼️ 6. Property Image
+Stores images for a property.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `property`: Associated property
+- `image_url`: Path or URL
+- `is_cover`: Boolean for main image
+- `uploaded_at`: Upload time
+
+**Relationships:**
+- Belongs to one property
+
+---
+
+## 📬 7. Notification
+System messages for users.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user`: Notification recipient
+- `message`: Content
+- `type`: e.g., booking, system
+- `is_read`: Read status
+
+**Relationships:**
+- Belongs to one user
+
+---
+
+## 📊 8. AnalyticsEvent
+Tracks user/system actions.
+
+**Key Fields:**
+- `id`: Unique identifier
+- `user`: Linked user (nullable)
+- `event_type`: e.g., login, search
+- `timestamp`: When it occurred
+- `metadata`: Additional context
+
+**Relationships:**
+- May be linked to a user
+
+---

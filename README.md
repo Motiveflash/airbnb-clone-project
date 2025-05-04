@@ -302,3 +302,81 @@ Properties can have multiple images uploaded and managed, including selecting a 
 The system logs key events (e.g., property views, searches, logins) for usage analytics. This helps administrators understand user behavior and optimize the platform accordingly.
 
 ---
+
+## 🔐 API Security
+
+This document outlines the core security measures that will be implemented in the Airbnb Clone backend and explains why each is crucial to maintaining the integrity and safety of the platform.
+
+---
+
+## 1. Authentication
+**What it is:**  
+Authentication verifies the identity of users trying to access the system, typically using methods like email/password login, JWT (JSON Web Tokens), or OAuth.
+
+**Why it's important:**  
+Ensures that only legitimate users can log in and access personal data, bookings, or host privileges. Without proper authentication, attackers could impersonate users and compromise sensitive data.
+
+---
+
+## 2. Authorization
+**What it is:**  
+Authorization determines what authenticated users are allowed to do—e.g., whether a user can update a property listing or view payment history.
+
+**Why it's important:**  
+Protects resources from being accessed or manipulated by unauthorized users. For example, only a host should be able to edit their own property listings, and guests should not access admin functionalities.
+
+---
+
+## 3. Rate Limiting
+**What it is:**  
+Limits the number of requests a user can make in a given timeframe to prevent abuse (e.g., brute-force attacks or API spamming).
+
+**Why it's important:**  
+Prevents denial-of-service attacks and reduces server overload, ensuring a stable and fair experience for all users.
+
+---
+
+## 4. Input Validation and Sanitization
+**What it is:**  
+Ensures that data entered into the system (e.g., usernames, comments, booking details) is safe and well-formed.
+
+**Why it's important:**  
+Protects the system from common vulnerabilities like SQL Injection, Cross-Site Scripting (XSS), and command injection, which could be used to steal or corrupt data.
+
+---
+
+## 5. Secure Payment Processing
+**What it is:**  
+Payments are handled through secure, PCI-compliant third-party gateways (e.g., Stripe, PayPal), with encrypted communication and tokenized transactions.
+
+**Why it's important:**  
+Prevents credit card fraud, ensures trust, and protects both users and hosts from financial theft or manipulation.
+
+---
+
+## 6. HTTPS/SSL Encryption
+**What it is:**  
+All data transmitted between clients and servers will use HTTPS to ensure encryption in transit.
+
+**Why it's important:**  
+Prevents man-in-the-middle attacks and eavesdropping, especially important for transmitting login credentials and payment data.
+
+---
+
+## 7. Session Management
+**What it is:**  
+Securely manages user sessions through techniques like token expiration, secure cookies, and session invalidation on logout.
+
+**Why it's important:**  
+Prevents session hijacking or reuse of old tokens to impersonate users.
+
+---
+
+## 8. Data Encryption at Rest
+**What it is:**  
+Sensitive data (e.g., passwords, personal information) will be encrypted in the database using secure algorithms.
+
+**Why it's important:**  
+If the database is ever compromised, encrypted data will be unreadable without the keys, reducing data breach impact.
+
+---

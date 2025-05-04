@@ -7,7 +7,7 @@ The backend for the **Airbnb Clone project** is designed to provide a robust and
 
 ## 👥 Team Roles 
 
-This  outlines the core roles and responsibilities of each team member involved in the development of the Airbnb Clone backend. 
+This section outlines the core roles and responsibilities of each team member involved in the development of the Airbnb Clone backend. 
 
 ---
 
@@ -113,7 +113,7 @@ A combination of modern and scalable technologies is used to build the backend o
 
   ## 📦 Database Design
 
-This outlines the core entities used in the backend of the Airbnb Clone project, including their key fields and how they relate to one another.
+This section outlines the core entities used in the backend of the Airbnb Clone project, including their key fields and how they relate to one another.
 
 ---
 
@@ -244,5 +244,61 @@ Tracks user/system actions.
 
 **Relationships:**
 - May be linked to a user
+
+---
+
+## 🛠️ Features Overview
+
+This section outlines the main features of the Airbnb Clone backend and how they contribute to the functionality of the platform.
+
+---
+
+## 1. API Documentation
+The backend APIs are well-documented using the **OpenAPI standard**, making them easy to understand and integrate. Both RESTful endpoints via **Django REST Framework** and flexible data querying via **GraphQL** are provided.
+
+---
+
+## 2. User Authentication
+Users can register, log in, and manage their profiles through secure endpoints like `/users/` and `/users/{user_id}/`. This feature ensures identity verification, session management, and role-based access.
+
+---
+
+## 3. Property Management
+Hosts can create, update, view, and delete their property listings via endpoints like `/properties/`. This functionality enables dynamic listing management, which is crucial for a scalable booking platform.
+
+---
+
+## 4. Booking System
+Users can book properties by specifying check-in and check-out dates using endpoints like `/bookings/`. This system handles availability tracking, conflict prevention, and booking status updates.
+
+---
+
+## 5. Payment Processing
+Integrated through endpoints like `/payments/`, this feature processes and records transactions securely. It ensures users can pay for bookings while maintaining traceable financial records.
+
+---
+
+## 6. Review System
+After a stay, guests can leave feedback on properties via `/reviews/`. Ratings and comments help maintain quality and build trust among future users.
+
+---
+
+## 7. Database Optimizations
+Through **indexing** and **caching strategies**, this feature boosts performance for frequent queries and reduces server load. It ensures data retrieval is fast and efficient even under high user traffic.
+
+---
+
+## 8. Notification System
+Users receive real-time alerts for important actions like booking confirmations or cancellations. This enhances user engagement and keeps users informed without needing to refresh or log in constantly.
+
+---
+
+## 9. Image Upload & Management
+Properties can have multiple images uploaded and managed, including selecting a cover image. Visual content is essential for user decision-making and improving booking conversion rates.
+
+---
+
+## 10. Analytics and Event Tracking
+The system logs key events (e.g., property views, searches, logins) for usage analytics. This helps administrators understand user behavior and optimize the platform accordingly.
 
 ---

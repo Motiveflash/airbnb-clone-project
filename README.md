@@ -80,3 +80,31 @@ This  outlines the core roles and responsibilities of each team member involved 
 - Ensure that the backend meets quality, performance, and security standards.
 
 ---
+
+## ⚙️ Technology Stack
+
+A combination of modern and scalable technologies is used to build the backend of the Airbnb Clone:
+
+- **Django**  
+  A high-level Python web framework that enables rapid development of secure and maintainable web applications.
+
+- **Django REST Framework (DRF)**  
+  Provides a powerful toolkit for building Web APIs, making it easy to handle authentication, permissions, and CRUD operations.
+
+- **PostgreSQL**  
+  A robust, open-source relational database known for performance, reliability, and advanced querying capabilities.
+
+- **GraphQL**  
+  Enables flexible and efficient data querying and mutation, allowing clients to request exactly the data they need.
+
+- **Celery**  
+  An asynchronous task queue used for handling background tasks such as sending emails and processing payments.
+
+- **Redis**  
+  A fast, in-memory data structure store used for caching, session management, and Celery task queuing.
+
+- **Docker**  
+  Ensures consistency across development, testing, and production environments through containerization.
+
+- **CI/CD Pipelines**  
+  Automates testing, building, and deployment processes, ensuring smooth integration and faster release cycles.

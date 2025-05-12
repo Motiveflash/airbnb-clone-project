@@ -232,21 +232,6 @@ System messages for users.
 
 ---
 
-## 📊 8. AnalyticsEvent
-Tracks user/system actions.
-
-**Key Fields:**
-- `id`: Unique identifier
-- `user`: Linked user (nullable)
-- `event_type`: e.g., login, search
-- `timestamp`: When it occurred
-- `metadata`: Additional context
-
-**Relationships:**
-- May be linked to a user
-
----
-
 ## 🛠️ Feature Breakdown
 
 This section outlines the main features of the Airbnb Clone backend and how they contribute to the functionality of the platform.
